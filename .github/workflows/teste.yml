@@ -1,0 +1,13 @@
+name: Teste Mac
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  mac:
+    runs-on: macos-latest
+    steps:
+      - name: Versões do Xcode e do SDK do iPhone
+        run: |
+          xcodebuild -version
+          xcrun --sdk iphoneos --show-sdk-version
+          echo "Ola mundo do Mac do GitHub!"
